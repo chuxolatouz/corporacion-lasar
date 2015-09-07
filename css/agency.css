@@ -865,3 +865,8 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
+
+#map {
+width: 500px;
+height: 240px;
+}
