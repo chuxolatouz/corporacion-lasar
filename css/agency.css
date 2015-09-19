@@ -880,3 +880,16 @@ height: 240px;
 footer{
     background-color: #C0DEED
 }
+
+#myCarousel {
+    padding-top: 70px
+}
+
+.carousel-inner{
+    text-align: -moz-center;
+    text-align: -webkit-center;
+    text-align: -o-center;
+}
+/*.carousel-inner{
+    text-align: center;
+}*/
