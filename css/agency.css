@@ -890,6 +890,11 @@ footer{
     text-align: -webkit-center;
     text-align: -o-center;
 }
-/*.carousel-inner{
-    text-align: center;
-}*/
+#prod ul{
+    display: none;
+}
+#prod:hover ul{
+    display: block;
+    padding-left: 10px;
+
+}
