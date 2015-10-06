@@ -13,6 +13,14 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+    $(document).ready(function(){
+		$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+			event.preventDefault(); 
+			event.stopPropagation(); 
+			$(this).parent().siblings().removeClass('open');
+			$(this).parent().toggleClass('open');
+		});
+	});
 });
 
 // Highlight the top nav as scrolling occurs
@@ -24,3 +32,4 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
