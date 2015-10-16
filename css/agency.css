@@ -209,7 +209,7 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: #3CF;
 }
 
 .navbar-default .nav li a:hover,
@@ -874,7 +874,7 @@ height: 240px;
 
 .navbar-default.navbar-shrink {
     padding: 10px 0px;
-    background-color: #3cf;
+    background-color: #FFF;
 }
 
 footer{
@@ -899,11 +899,19 @@ footer{
 
 }
 .dropdown-menu {
-    background-color: #3cf;
+    background-color: #FFF;
     border: none;
 }
 
-#subm:hover a{
-    display: block;
-    padding-left: 10px;
+#subm:hover .hidden{
+    display: block !important;
+    visibility: visible;
+    transition: width 2s, height 4s;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 2s;
 }
+
+#subm:hover .hidden li{
+    list-style: none;
+}
+
