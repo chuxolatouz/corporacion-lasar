@@ -78,22 +78,22 @@
                     </li>
 
                     <li id="prod">
-                        <a class="page-scroll text-nowrap" href="#portfolio">Productos</a>
+                        <a class="page-scroll text-nowrap" href="#portfolio" onclick="mainToggle()">Productos</a>
                          <ul class="dropdown-menu ">
                             <li  id="subm">
-                                <a href="#portfolio">Balanzas
+                                <a href="#portfolio" onclick="toggleProducts('c_balanza')">Balanzas
                                     <ul class="dropdown-menu-right hidden" >
-                                        <li><a href="#portfolio">Balanzas 1</a></li>
-                                        <li><a href="#portfolio">Balanzas 2</a></li>
+                                        <li><a href="#portfolio" onclick="toggleProducts('c_balanza1')">Balanzas 1</a></li>
+                                        <li><a href="#portfolio" onclick="toggleProducts('c_balanza2')">Balanzas 2</a></li>
                                     </ul>
                                 </a>
 
                             </li>
-                            <li><a href="#portfolio">Cajas Registradoras</a></li>
-                            <li><a href="#portfolio">Impresoras Fiscales</a></li>
-                            <li><a href="#portfolio">Contadoras de Billetes</a></li>
-                            <li><a href="#portfolio">Papel Termico</a></li>
-                            <li><a href="#portfolio">Scanner</a></li>
+                            <li><a href="#portfolio" onclick="toggleProducts('c_cregistradora')">Cajas Registradoras</a></li>
+                            <li><a href="#portfolio" onclick="toggleProducts('c_ifiscal')">Impresoras Fiscales</a></li>
+                            <li><a href="#portfolio" onclick="toggleProducts('c_cbillete')">Contadoras de Billetes</a></li>
+                            <li><a href="#portfolio" onclick="toggleProducts('c_ctermico')">Papel Termico</a></li>
+                            <li><a href="#portfolio" onclick="toggleProducts('c_scanner')">Scanner</a></li>
                         </ul>
                     </li>
                     <li id="prod">
@@ -103,9 +103,9 @@
                             <li><a href="#">Servicio Tecnico</a></li>
                         </ul>
                     </li>
-                    <li>
+                  <!--  <li>
                         <a class="page-scroll" href="#team">Clientes</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a class="page-scroll" href="#contact">Nosotros</a>
                     </li>
@@ -186,7 +186,7 @@
             </div>
             <div class="row">
 
-                <div class="col-md-2 col-sm-3 portfolio-item c_balanza">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_cbalanza">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -199,9 +199,9 @@
                         <h4>ACLAS</h4>
                         <p class="text-muted">Balanza Electronica LS21530EC</p>
                     </div>
-                </div>x
+                </div>
 
-                <div class="col-md-2 col-sm-3 portfolio-item c_cregistradora">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_cregistradora">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -215,7 +215,7 @@
                         <p class="text-muted">Caja Registradora CR2100</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3 portfolio-item c_cbillete">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_cbillete">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -229,7 +229,7 @@
                         <p class="text-muted">Contador de Billete BC-2000UV</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3 portfolio-item c_pos">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_pos">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -243,7 +243,7 @@
                         <p class="text-muted">POS ELO TOUCH SCREEN</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3 portfolio-item c_impresora">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_impresora">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -257,7 +257,7 @@
                         <p class="text-muted">Impresora Fiscal PNP PF-220</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3 portfolio-item c_ptermico">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_ptermico">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -272,7 +272,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2 col-sm-3 portfolio-item c_balanza">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_balanza">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -287,7 +287,22 @@
                     </div>
                 </div>
 
-                <div class="col-md-2 col-sm-3 portfolio-item">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_balanza">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/LS21530EC test.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>ACLAS</h4>
+                        <p class="text-muted">Balanza Electronica LS21530EC</p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_cregistradora">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -301,7 +316,7 @@
                         <p class="text-muted">Caja Registradora CR2100</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3 portfolio-item">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_cbillete">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -315,7 +330,7 @@
                         <p class="text-muted">Contador de Billete BC-2000UV</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3 portfolio-item">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_pos">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -326,10 +341,10 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>ELO</h4>
-                        <p class="text-muted">POS ELO TOUCH</p>
+                        <p class="text-muted">POS ELO TOUCH SCREEN</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3 portfolio-item">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_impresora">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -343,8 +358,7 @@
                         <p class="text-muted">Impresora Fiscal PNP PF-220</p>
                     </div>
                 </div>
-
-                <div class="col-md-2 col-sm-2 portfolio-item">
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_ptermico">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -354,8 +368,23 @@
                         <img src="img/portfolio/Papel T 80mm test.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Papel Térmico</h4>
-                        <p class="text-muted">Papel Térmico 80mm</p>
+                        <h4>Papel</h4>
+                        <p class="text-muted">Papel Impresion Térmico 80mm</p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 portfolio-item articulo c_balanza">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/LS21530EC test.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>ACLAS</h4>
+                        <p class="text-muted">Balanza Electronica LS21530EC</p>
                     </div>
                 </div>
 
@@ -444,7 +473,7 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Team Section
     <section id="team" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -472,7 +501,7 @@
 
         </div>
     </section>
-
+    -->
 
 
     <!-- Contact Section -->
@@ -518,7 +547,7 @@
         </div>
     </section>
 
-    <!-- Clients Aside -->
+    <!-- Clients Aside
     <aside class="clients">
         <div class="container">
             <div class="row">
@@ -545,11 +574,12 @@
             </div>
         </div>
     </aside>
+    -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                    <span class="copyright">Copyright &copy; Corporacion Lasar J-30671316-6</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
@@ -563,9 +593,7 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">corpolasar@blablabla.com</a>
-                        </li>
-                        <li><a href="#">corpolasar@blablabla.com</a>
+                        <li><a href="#">ventas@corpolasar.com</a>
                         </li>
                     </ul>
                 </div>
